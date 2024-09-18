@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'Fixel Variable';
+  src: url('/fonts/FixelVariable.ttf') format('ttf');
+  font-weight: 100 900;
+  font-style: normal;
+}
+
 *,
 *::before,
 *::after {
@@ -12,11 +19,12 @@ html {
   -webkit-text-size-adjust: 100%;
   -moz-tab-size: 4;
   tab-size: 4;
+  scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
-  font-family: sans-serif;
+  font-family: 'Fixel Variable', sans-serif;
   background-color: #fff;
   color: #fff;
   min-height: 100vh;

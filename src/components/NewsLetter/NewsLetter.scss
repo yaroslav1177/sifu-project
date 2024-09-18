@@ -1,29 +1,28 @@
 .newsletter {
   text-align: center;
-  padding: 40px 20px;
+  padding: 120px 20px;
   margin: 0 auto;
   color: white;
   background: linear-gradient(
-    to right,
-    rgba(17, 17, 17, 1) 20%,
-    #35100f 50%,
-    rgba(17, 17, 17, 1) 80%
-  );
+      to bottom,
+      rgba(17, 17, 17, 1) 0%,
+      rgba(17, 17, 17, 0) 20%
+    ),
+    linear-gradient(
+      to right,
+      rgba(17, 17, 17, 1) 20%,
+      #35100f 50%,
+      rgba(17, 17, 17, 1) 80%
+    );
 
-  // background: linear-gradient(180deg, #111111 0%, rgba(17, 17, 17, 0) 50%),
-  // linear-gradient(
-  //   to right,
-  //   rgba(17, 17, 17, 1) 20%,
-  //   #35100f 50%,
-  //   rgba(17, 17, 17, 1) 80%
-  // );
-
-  &__title {
+  &__header {
     margin-bottom: 62px;
   }
 
   &__form {
-    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 44px;
     max-width: 600px;
     margin: 0 auto;
     margin-bottom: 44px;

@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./NewsLetter.scss";
 
 export const NewsLetter = () => {
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [agreed, setAgreed] = useState(false);
   const [error, setError] = useState("");
@@ -11,8 +12,18 @@ export const NewsLetter = () => {
     return re.test(String(email).toLowerCase());
   };
 
-  const handleSubmit = (e: { preventDefault: () => void; }) => {
+  const validateName = (name: string) => {
+    const re = /^[a-zA-Z\s]{2,30}$/;
+    return re.test(String(name).trim());
+  };
+
+  const handleSubmit = (e: { preventDefault: () => void }) => {
     e.preventDefault();
+
+    if (!validateName(name)) {
+      setError("Please enter a valid name (only letters, 2-30 characters).");
+      return;
+    }
 
     if (!validateEmail(email)) {
       setError("Please enter a valid email address.");
@@ -27,21 +38,35 @@ export const NewsLetter = () => {
     setError("");
 
     const formData = {
+      name: name,
       email: email,
       agreed: agreed,
     };
 
     console.log("Form submitted:", formData);
 
+    setName("");
     setEmail("");
     setAgreed(false);
   };
 
   return (
-    <form className="newsletter" onSubmit={handleSubmit}>
-      <h1 className="available__title newsletter__title">NEWSLETTER · 通讯</h1>
+    <form className="newsletter" onSubmit={handleSubmit} id="contact">
+      <div className="newsletter__header title-group">
+        <h2 className="title-group__title">NEWSLETTER</h2>
+        <div className="title-group__dot"></div>
+        <h2 className="title-group__title-japan">通讯</h2>
+      </div>
 
       <div className="newsletter__form">
+        <input
+          type="text"
+          placeholder="Enter your name"
+          className="newsletter__input"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          required
+        />
         <input
           type="email"
           placeholder="Enter e-mail address"

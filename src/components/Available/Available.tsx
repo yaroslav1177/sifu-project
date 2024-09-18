@@ -3,10 +3,10 @@ import './Available.scss';
 export const Available = () => {
   return (
     <section className='available'>
-      <div className='available__top'>
-        <h2 className='available__title'>available</h2>
-        <div className='available__dot'></div>
-        <h2 className='available__title-japan'>可用</h2>
+      <div className='available__header title-group'>
+        <h2 className='title-group__title'>available</h2>
+        <div className='title-group__dot'></div>
+        <h2 className='title-group__title-japan'>可用</h2>
       </div>
       <ul className="available__list">
             <li className="available__item">

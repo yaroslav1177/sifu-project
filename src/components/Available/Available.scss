@@ -1,33 +1,16 @@
 .available {
   background: linear-gradient(180deg, #111111 0%, rgba(17, 17, 17, 0) 100%),
+    linear-gradient(to top, rgba(17, 17, 17, 1) 0%, rgba(17, 17, 17, 0) 20%),
     url("/images/available-bg.jpg") center bottom/cover no-repeat;
   padding: 56px 0px 160px 0px;
   display: flex;
   flex-direction: column;
   gap: 50px;
 
-  &__top {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
+  &__header {
+    padding-top: 30px;
   }
 
-  &__title {
-    font-size: 75px;
-    font-weight: 700;
-    text-transform: uppercase;
-  }
-  &__title-japan {
-    font-weight: 100;
-    font-size: 75px;
-  }
-  &__dot {
-    width: 12px;
-    height: 12px;
-    background-color: #fff;
-    border-radius: 50%;
-  }
   &__list {
     display: flex;
     justify-content: center;
@@ -46,5 +29,28 @@
 
   &__item:hover {
     box-shadow: 0px 0px 30px 0px rgba(255, 255, 255, 0.5);
+  }
+}
+
+.title-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+
+  &__title {
+    font-size: 75px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  &__title-japan {
+    font-weight: 100;
+    font-size: 75px;
+  }
+  &__dot {
+    width: 12px;
+    height: 12px;
+    background-color: #fff;
+    border-radius: 50%;
   }
 }

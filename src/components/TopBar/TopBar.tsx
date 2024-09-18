@@ -21,7 +21,7 @@ export const TopBar = () => {
           <ul className="navigation__list">
             <li className="navigation__item">
               <a
-                href="#home"
+                href="#"
                 className={`navigation__link ${
                   activeLink === "home" ? "active" : ""
                 }`}
