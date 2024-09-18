@@ -1,3 +1,5 @@
+import { useEffect, useRef, useState } from "react";
+import "animate.css";
 import "./Gallery.scss";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -14,16 +16,56 @@ import {
 } from "swiper/modules";
 
 export const Gallery = () => {
+  const topRef = useRef(null);
+  const scrollRef = useRef(null);
+
+  const [isTopVisible, setIsTopVisible] = useState(false);
+  const [isScrollVisible, setIsScrollVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.target === topRef.current && entry.isIntersecting) {
+            setIsTopVisible(true);
+          }
+          if (entry.target === scrollRef.current && entry.isIntersecting) {
+            setIsScrollVisible(true);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    if (topRef.current) observer.observe(topRef.current);
+    if (scrollRef.current) observer.observe(scrollRef.current);
+
+    return () => {
+      if (topRef.current) observer.unobserve(topRef.current);
+      if (scrollRef.current) observer.unobserve(scrollRef.current);
+    };
+  }, []);
+
   return (
     <section className="gallery" id="gallery">
       <div className="slider">
         <div className="gallery__header">
-          <div className="gallery__top title-group">
+          <div
+            ref={topRef}
+            className={`gallery__top title-group animate__animated ${
+              isTopVisible ? "animate__fadeInLeft" : ""
+            }`}
+          >
             <h2 className="title-group__title">GALLERY</h2>
             <div className="title-group__dot"></div>
             <h2 className="title-group__title-japan">艺术</h2>
           </div>
-          <div className="scroll">
+          <div
+            ref={scrollRef}
+            className={`scroll animate__animated ${
+              isScrollVisible ? "animate__fadeInRight" : ""
+            }`}
+          >
             <div className="scroll__titles">
               <p className="scroll__title">PHOTOS_相片</p>
               <p className="scroll__title">VIDEOS_影片</p>

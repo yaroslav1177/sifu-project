@@ -3,7 +3,7 @@ import "./MainScreen.scss";
 export const MainScreen = () => {
   return (
     <section className="main">
-      <div className="main__available">
+      <div className="main__available animate__animated animate__fadeInUp">
         <h3 className="main__subtitle">available on</h3>
         <div className="main__social social">
           <ul className="social__list">

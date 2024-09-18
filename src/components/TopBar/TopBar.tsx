@@ -8,7 +8,7 @@ export const TopBar = () => {
   };
 
   return (
-    <div className="top-bar">
+    <div className="top-bar animate__animated animate__fadeInDown">
       <a href="#">
         <img
           src="/images/top-bar-logo.svg"

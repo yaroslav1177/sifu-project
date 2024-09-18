@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import "./NewsLetter.scss";
 
 export const NewsLetter = () => {
@@ -6,6 +6,16 @@ export const NewsLetter = () => {
   const [email, setEmail] = useState("");
   const [agreed, setAgreed] = useState(false);
   const [error, setError] = useState("");
+
+  const headerRef = useRef(null);
+  const formRef = useRef(null);
+  const checkboxRef = useRef(null);
+  const buttonRef = useRef(null);
+
+  const [isHeaderVisible, setIsHeaderVisible] = useState(false);
+  const [isFormVisible, setIsFormVisible] = useState(false);
+  const [isCheckboxVisible, setIsCheckboxVisible] = useState(false);
+  const [isButtonVisible, setIsButtonVisible] = useState(false);
 
   const validateEmail = (email: string) => {
     const re = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
@@ -50,15 +60,59 @@ export const NewsLetter = () => {
     setAgreed(false);
   };
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.target === headerRef.current && entry.isIntersecting) {
+            setIsHeaderVisible(true);
+          }
+          if (entry.target === formRef.current && entry.isIntersecting) {
+            setIsFormVisible(true);
+          }
+          if (entry.target === checkboxRef.current && entry.isIntersecting) {
+            setIsCheckboxVisible(true);
+          }
+          if (entry.target === buttonRef.current && entry.isIntersecting) {
+            setIsButtonVisible(true);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    if (headerRef.current) observer.observe(headerRef.current);
+    if (formRef.current) observer.observe(formRef.current);
+    if (checkboxRef.current) observer.observe(checkboxRef.current);
+    if (buttonRef.current) observer.observe(buttonRef.current);
+
+    return () => {
+      if (headerRef.current) observer.unobserve(headerRef.current);
+      if (formRef.current) observer.unobserve(formRef.current);
+      if (checkboxRef.current) observer.unobserve(checkboxRef.current);
+      if (buttonRef.current) observer.unobserve(buttonRef.current);
+    };
+  }, []);
+
   return (
     <form className="newsletter" onSubmit={handleSubmit} id="contact">
-      <div className="newsletter__header title-group">
+      <div
+        ref={headerRef}
+        className={`newsletter__header title-group animate__animated ${
+          isHeaderVisible ? "animate__fadeInUp" : ""
+        }`}
+      >
         <h2 className="title-group__title">NEWSLETTER</h2>
         <div className="title-group__dot"></div>
         <h2 className="title-group__title-japan">通讯</h2>
       </div>
 
-      <div className="newsletter__form">
+      <div
+        ref={formRef}
+        className={`newsletter__form animate__animated ${
+          isFormVisible ? "animate__fadeIn" : ""
+        }`}
+      >
         <input
           type="text"
           placeholder="Enter your name"
@@ -77,7 +131,12 @@ export const NewsLetter = () => {
         />
       </div>
 
-      <div className="newsletter__checkbox">
+      <div
+        ref={checkboxRef}
+        className={`newsletter__checkbox animate__animated ${
+          isCheckboxVisible ? "animate__fadeIn" : ""
+        }`}
+      >
         <input
           type="checkbox"
           id="agree"
@@ -97,7 +156,13 @@ export const NewsLetter = () => {
 
       {error && <p className="newsletter__error">{error}</p>}
 
-      <button type="submit" className="newsletter__subscribe">
+      <button
+        ref={buttonRef}
+        type="submit"
+        className={`newsletter__subscribe animate__animated ${
+          isButtonVisible ? "animate__fadeIn" : ""
+        }`}
+      >
         SUBSCRIBE
       </button>
     </form>
