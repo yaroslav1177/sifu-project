@@ -1,0 +1,142 @@
+.follow {
+  background: 
+  linear-gradient(
+    to top,
+    rgba(17, 17, 17, 1) 0%,
+    rgba(17, 17, 17, 0) 90%
+  ),
+  linear-gradient(
+    to right,
+    rgba(17, 17, 17, 1) 20%, 
+    #35100f 50%, 
+    rgba(17, 17, 17, 1) 80%
+  );
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 70px 0 40px 0;
+
+  &__title {
+    font-size: 45px;
+    font-weight: 600;
+    line-height: 62px;
+    margin-bottom: 40px;
+  }
+
+  &__social {
+    display: flex;
+    gap: 100px;
+    margin-bottom: 68px;
+  }
+  &__technology {
+    display: flex;
+    align-items: center;
+    gap: 165px;
+  }
+}
+
+.sloclap-logo {
+  position: relative;
+  display: inline-block;
+  transition: opacity 0.3s ease;
+  overflow: hidden;
+
+  img {
+    transition: opacity 0.3s ease;
+  }
+
+  &::before {
+    content: url("/images/icons/sloclap-hover.svg");
+    position: absolute;
+    top: -50px;
+    left: -20px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  &:hover {
+    img {
+      opacity: 0;
+    }
+
+    &::before {
+      opacity: 1;
+    }
+  }
+}
+
+.kepler-logo {
+  position: relative;
+  display: inline-block;
+  transition: opacity 0.3s ease;
+  overflow: hidden;
+
+  img {
+    transition: opacity 0.3s ease;
+  }
+
+  &::before {
+    content: url("/images/icons/kepler-hover.svg");
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  &:hover {
+    img {
+      opacity: 0;
+    }
+
+    &::before {
+      opacity: 1;
+    }
+  }
+}
+
+.unreal-logo {
+  position: relative;
+  display: inline-block;
+  transition: opacity 0.3s ease;
+  overflow: hidden;
+
+  img {
+    transition: opacity 0.3s ease;
+  }
+
+  &::before {
+    content: url("/images/icons/unreal-hover.svg");
+    position: absolute;
+    top: -50px;
+    left: -20px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  &:hover {
+    img {
+      opacity: 0;
+    }
+
+    &::before {
+      opacity: 1;
+    }
+  }
+}
+
+.follow__social-link {
+  transition: all 300ms ease-in-out;
+  width: 90px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+
+  &:hover {
+    box-shadow: 0px 0px 30px 0px rgba(255, 255, 255, 0.5);
+  }
+}
