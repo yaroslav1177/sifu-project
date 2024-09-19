@@ -29,7 +29,7 @@ export const About = () => {
             <div className="slide1">
               <div className="slide1__content">
                 <h2 className="slide1__title">
-                  ON THE PATH <br />
+                  ON THE PATH 
                   OF VENGEANCE
                 </h2>
                 <div className="slide1__line"></div>

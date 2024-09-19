@@ -2,10 +2,14 @@
   height: 100vh;
   background: 
   linear-gradient(180deg, rgba(17, 17, 17, 0) 80%, #111111 100%),
-    url('/images/main-warrior-bg.png') center/contain no-repeat,
+    url('/images/main-warrior-bg.png') center/cover no-repeat,
     url('/images/top-bar-logo.svg') center 20px/600px 500px no-repeat,
     url('/images/main-bg.jpg') bottom right/cover no-repeat;
   padding-top: 560px;
+
+  @media (max-width: 1200px) {
+    padding-top: 460px;
+  }
   
 
   &__available {
@@ -15,12 +19,17 @@
     justify-content: center;
     gap: 25px;
     align-items: center;
+    overflow-x: hidden;
     background: linear-gradient(
       to right,
       rgba(17, 17, 17, 1) 0%,
       #35100f 50%,
       rgba(17, 17, 17, 1) 100%
-    );;
+    );
+
+    @media (max-width: 1200px) {
+      padding: 15px;
+    }
   }
   
   &__subtitle {
@@ -35,6 +44,13 @@
     display: flex;
     gap: 60px;
     align-items: center;
+  
+    @media (max-width: 1200px) {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      row-gap: 20px;
+      column-gap: 40px;
+    }
   }
 
   &__item {
@@ -45,6 +61,11 @@
     align-items: center;
     justify-content: center;
     border-radius: 50%;
+
+    @media (max-width: 1200px) {
+      width: 50px;
+      height: 50px;
+    }
   }
 
   &__item:hover {
