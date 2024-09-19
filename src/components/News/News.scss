@@ -8,10 +8,16 @@
 
   @media (max-width: 1200px) {
     padding-inline: 100px;
+    background: linear-gradient(180deg, #111111 0%, rgba(17, 17, 17, 0) 100%),
+    linear-gradient(180deg, rgba(17, 17, 17, 0) 50%, #111111 100%),
+    url("/images/news-bg.jpg") center center/cover no-repeat;
   }
 
   @media (max-width: 768px) {
     padding-inline: 20px;
+    background: linear-gradient(180deg, #111111 0%, rgba(17, 17, 17, 0) 100%),
+    linear-gradient(180deg, rgba(17, 17, 17, 0) 50%, #111111 100%),
+    url("/images/news-bg.jpg") -1800px center/cover no-repeat;
   }
 
   &__header {
