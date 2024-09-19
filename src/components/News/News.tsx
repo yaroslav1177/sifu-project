@@ -41,9 +41,9 @@ export const News = () => {
           isHeaderVisible ? "animate__fadeInUp" : ""
         }`}
       >
-        <h2 className="title-group__title">LATEST NEWS</h2>
+        <h2 className="title-group__title news__title">LATEST NEWS</h2>
         <div className="title-group__dot"></div>
-        <h2 className="title-group__title-japan">消息</h2>
+        <h2 className="title-group__title-japan news__title-japan">消息</h2>
       </div>
 
       <div

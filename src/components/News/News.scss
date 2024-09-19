@@ -1,9 +1,18 @@
 .news {
   background: linear-gradient(180deg, #111111 0%, rgba(17, 17, 17, 0) 100%),
-  linear-gradient(180deg, rgba(17, 17, 17, 0) 50%, #111111 100%),
-  url("/images/news-bg.jpg") center center/cover no-repeat;
+    linear-gradient(180deg, rgba(17, 17, 17, 0) 50%, #111111 100%),
+    url("/images/news-bg.jpg") center center/cover no-repeat;
   padding-inline: 230px;
   padding-block: 100px;
+  overflow-x: hidden;
+
+  @media (max-width: 1200px) {
+    padding-inline: 100px;
+  }
+
+  @media (max-width: 768px) {
+    padding-inline: 20px;
+  }
 
   &__header {
     padding-top: 30px;
@@ -12,6 +21,27 @@
   &__content {
     display: flex;
     justify-content: space-between;
+    gap: 100px;
+
+    @media (max-width: 1400px) {
+      flex-direction: column;
+      align-items: center;
+    }
+    @media (max-width: 768px) {
+      align-items: center;
+      gap: 30px;
+    }
+  }
+}
+
+.news__title {
+  @media (max-width: 768px) {
+    font-size: 30px;
+  }
+}
+.news__title-japan {
+  @media (max-width: 768px) {
+    font-size: 30px;
   }
 }
 
@@ -21,23 +51,39 @@
   flex-direction: column;
   gap: 30px;
 
+  @media (max-width: 768px) {
+    align-items: center;
+  }
+
   &__image {
     width: 580px;
     height: 340px;
-    background:
-      url('/images/arenas-logo.svg') center/contain no-repeat, 
-      url('/images/arenas-bg.jpg') center/contain no-repeat;
+    background: url("/images/arenas-logo.svg") center/contain no-repeat,
+      url("/images/arenas-bg.jpg") center/contain no-repeat;
     background-blend-mode: normal, normal, multiply;
     box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 1);
+  }
+  &__date {
+    @media (max-width: 768px) {
+      padding-inline: 140px;
+    }
   }
   &__title {
     font-size: 45px;
     line-height: 45px;
     font-weight: 700;
+    @media (max-width: 768px) {
+      font-size: 25px;
+      line-height: 25px;
+      padding-inline: 140px;
+    }
   }
   &__description {
     font-size: 18px;
     line-height: 22px;
+    @media (max-width: 768px) {
+      padding-inline: 140px;
+    }
   }
   &__link {
     margin-top: 10px;
@@ -47,8 +93,12 @@
     position: relative;
     transition: color 300ms ease-in-out;
     width: fit-content;
+
+    @media (max-width: 768px) {
+      padding-inline: 140px;
+    }
     &::after {
-      content: url('/images/icons/arrow-right.svg');
+      content: url("/images/icons/arrow-right.svg");
       position: absolute;
       top: 2px;
       margin-left: 8px;
@@ -77,7 +127,7 @@
   }
 
   &__date {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
 
   &__title {
@@ -85,6 +135,10 @@
     line-height: 45px;
     font-weight: 700;
     margin-bottom: 20px;
+    @media (max-width: 768px) {
+      font-size: 25px;
+      line-height: 25px;
+    }
   }
   &__description {
     font-size: 18px;
@@ -99,7 +153,7 @@
     transition: color 300ms ease-in-out;
     width: fit-content;
     &::after {
-      content: url('/images/icons/arrow-right.svg');
+      content: url("/images/icons/arrow-right.svg");
       position: absolute;
       top: 2px;
       margin-left: 8px;
@@ -127,4 +181,3 @@
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 10px;
 }
-

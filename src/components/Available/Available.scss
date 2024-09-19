@@ -6,6 +6,7 @@
   display: flex;
   flex-direction: column;
   gap: 50px;
+  overflow-x: hidden;
 
   &__header {
     padding-top: 30px;
@@ -16,6 +17,12 @@
     justify-content: center;
     align-items: center;
     gap: 40px;
+    @media (max-width: 768px) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      align-self: center;
+    }
   }
   &__item {
     transition: all 300ms ease-in-out;
@@ -42,10 +49,16 @@
     font-size: 75px;
     font-weight: 700;
     text-transform: uppercase;
+    @media (max-width: 768px) {
+      font-size: 35px;
+    }
   }
   &__title-japan {
     font-weight: 100;
     font-size: 75px;
+    @media (max-width: 768px) {
+      font-size: 35px;
+    }
   }
   &__dot {
     width: 12px;
