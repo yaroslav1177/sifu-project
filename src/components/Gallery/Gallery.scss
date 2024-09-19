@@ -27,11 +27,17 @@
     display: flex;
     gap: 40px;
     padding: 48px 0px 170px 0px;
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
   }
   &__slide2 {
     display: flex;
     gap: 40px;
     padding: 48px 0px 170px 0px;
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
   }
 
   &__header {
@@ -101,7 +107,7 @@
   background-size: 20px;
     @media (max-width: 1200px) {
       left: -230px;
-      top: 500px;
+      top: 510px;
     }
 }
 
@@ -113,6 +119,6 @@
   background-size: 20px;
   @media (max-width: 1200px) {
     right: -230px;
-    top: 500px;
+    top: 510px;
   }
 }
