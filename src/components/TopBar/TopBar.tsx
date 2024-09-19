@@ -37,7 +37,7 @@ export const TopBar = () => {
   return (
     <>
       <header className="header">
-        <div className="top-bar">
+        <div className="top-bar animate__animated animate__fadeInDown">
           <div className="top-bar__content">
             <a href="#">
               <img
