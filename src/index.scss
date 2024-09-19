@@ -101,6 +101,7 @@ button, input {
 ::-webkit-scrollbar-thumb {
   background-color: black;
   border: 1px double white;
+  border-right: none;
 }
 
 ::-webkit-scrollbar-track {
