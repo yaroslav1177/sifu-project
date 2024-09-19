@@ -92,3 +92,21 @@ button, input {
 [hidden] {
   display: none;
 }
+
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: black;
+  border: 1px double white;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #2F100F;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
