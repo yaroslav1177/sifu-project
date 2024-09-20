@@ -55,7 +55,7 @@ export const NewsLetter = () => {
     };
 
     try {
-      const response = await fetch("http://localhost/sifu-project/sendmail.php", {
+      const response = await fetch("https://sifu-project-3cbc594b9bed.herokuapp.com/sendmail.php", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
