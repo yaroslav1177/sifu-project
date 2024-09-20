@@ -6,6 +6,7 @@ export const NewsLetter = () => {
   const [email, setEmail] = useState("");
   const [agreed, setAgreed] = useState(false);
   const [error, setError] = useState("");
+  const [successMessage, setSuccessMessage] = useState<string>("");
 
   const headerRef = useRef(null);
   const formRef = useRef(null);
@@ -27,7 +28,7 @@ export const NewsLetter = () => {
     return re.test(String(name).trim());
   };
 
-  const handleSubmit = (e: { preventDefault: () => void }) => {
+  const handleSubmit = async (e: { preventDefault: () => void; }) => {
     e.preventDefault();
 
     if (!validateName(name)) {
@@ -48,16 +49,35 @@ export const NewsLetter = () => {
     setError("");
 
     const formData = {
-      name: name,
-      email: email,
-      agreed: agreed,
+      name,
+      email,
+      agreed,
     };
 
-    console.log("Form submitted:", formData);
+    try {
+      const response = await fetch("http://localhost/sifu-project/sendmail.php", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
 
-    setName("");
-    setEmail("");
-    setAgreed(false);
+      const result = await response.json();
+
+      if (result.success) {
+        setSuccessMessage("Subscription successful, please check your email!");
+      } else {
+        setError("Failed to send the email. Please try again.");
+      }
+
+      setName("");
+      setEmail("");
+      setAgreed(false);
+    } catch (error) {
+      console.error("Error:", error);
+      setError("There was an issue sending your request.");
+    }
   };
 
   useEffect(() => {
@@ -165,6 +185,9 @@ export const NewsLetter = () => {
       >
         SUBSCRIBE
       </button>
+      {successMessage && (
+        <p className="newsletter__success">{successMessage}</p>
+      )}
     </form>
   );
 };
