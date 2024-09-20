@@ -3,6 +3,15 @@ header("Access-Control-Allow-Origin: https://sifu-project.vercel.app");
 header("Access-Control-Allow-Headers: Content-Type");
 header("Content-Type: application/json; charset=UTF-8");
 
+$path = 'dist/assets/index-C05Doiea.js'; // Укажите правильный путь
+if (file_exists($path)) {
+    header("Content-Type: application/javascript");
+    echo file_get_contents($path);
+} else {
+    http_response_code(404);
+    echo 'File not found';
+}
+
 if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
     http_response_code(200);
     exit();

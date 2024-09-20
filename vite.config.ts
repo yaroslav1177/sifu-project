@@ -7,6 +7,7 @@ export default defineConfig({
   build: {
     outDir: 'dist',
   },
+  base: './',
   resolve: {
     alias: {
       'swiper/swiper-bundle.min.css': 'swiper/swiper.min.css',
