@@ -1,7 +1,14 @@
 <?php
-header("Access-Control-Allow-Origin: http://localhost:5173");
-header("Access-Control-Allow-Methods: POST, OPTIONS");
-header("Access-Control-Allow-Headers: Content-Type");
+header("Access-Control-Allow-Origin: *");
+header("Content-Type: text/html; charset=UTF-8");
+
+$path = '/dist/index.html';
+if (file_exists($path)) {
+    echo file_get_contents($path);
+} else {
+    http_response_code(404);
+    echo 'File not found';
+}
 
 if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
     http_response_code(200);
