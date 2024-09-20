@@ -1,14 +1,7 @@
 <?php
-header("Access-Control-Allow-Origin: *");
-header("Content-Type: text/html; charset=UTF-8");
-
-$path = 'dist/index.html';
-if (file_exists($path)) {
-    echo file_get_contents($path);
-} else {
-    http_response_code(404);
-    echo 'File not found';
-}
+header("Access-Control-Allow-Origin: https://sifu-project.vercel.app");
+header("Access-Control-Allow-Headers: Content-Type");
+header("Content-Type: application/json; charset=UTF-8");
 
 if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
     http_response_code(200);
