@@ -2,7 +2,7 @@
 header("Access-Control-Allow-Origin: *");
 header("Content-Type: text/html; charset=UTF-8");
 
-$path = '/dist/index.html';
+$path = 'dist/index.html';
 if (file_exists($path)) {
     echo file_get_contents($path);
 } else {
