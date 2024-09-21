@@ -55,7 +55,7 @@ export const NewsLetter = () => {
     };
 
     try {
-      const response = await fetch("/sendmail.php", {
+      const response = await fetch("https://sifuproject.infinityfreeapp.com/sendmail.php", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

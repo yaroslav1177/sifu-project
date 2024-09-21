@@ -1,5 +1,5 @@
 <?php
-header("Access-Control-Allow-Origin: https://sifu-project-3cbc594b9bed.herokuapp.com");
+header("Access-Control-Allow-Origin: https://sifu-project.vercel.app");
 header("Access-Control-Allow-Methods: POST, OPTIONS");
 header("Access-Control-Allow-Headers: Content-Type");
 if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
