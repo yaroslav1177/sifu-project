@@ -55,10 +55,10 @@ export const NewsLetter = () => {
     };
 
     try {
-      const response = await fetch("https://sifu-project-3cbc594b9bed.herokuapp.com/sendmail.php", {
+      const response = await fetch("/sendmail.php", {
         method: "POST",
         headers: {
-          "Content-Type": "application/json",
+          "Content-Type": "application/javascript",
         },
         body: JSON.stringify(formData),
       });
