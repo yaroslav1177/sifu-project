@@ -76,7 +76,7 @@ export const News = () => {
               {translations[language].replayTitle}
             </p>
             <p className="replay__description">
-              {translations[language].newsTitle}
+              {translations[language].replayDescription}
             </p>
             <a href="#" className="replay__link">
               {translations[language].readMore}
@@ -88,7 +88,7 @@ export const News = () => {
               {translations[language].replayTitle}
             </p>
             <p className="replay__description">
-              {translations[language].newsTitle}
+              {translations[language].replayDescription}
             </p>
             <a href="#" className="replay__link">
               {translations[language].readMore}
@@ -100,7 +100,7 @@ export const News = () => {
               {translations[language].replayTitle}
             </p>
             <p className="replay__description">
-              {translations[language].newsTitle}
+              {translations[language].replayDescription}
             </p>
             <a href="#" className="replay__link">
               {translations[language].readMore}
@@ -112,7 +112,7 @@ export const News = () => {
               {translations[language].replayTitle}
             </p>
             <p className="replay__description">
-              {translations[language].newsTitle}
+              {translations[language].replayDescription}
             </p>
             <a href="#" className="replay__link">
               {translations[language].readMore}
@@ -124,7 +124,7 @@ export const News = () => {
               {translations[language].replayTitle}
             </p>
             <p className="replay__description">
-              {translations[language].newsTitle}
+              {translations[language].replayDescription}
             </p>
             <a href="#" className="replay__link">
               {translations[language].readMore}
@@ -136,7 +136,7 @@ export const News = () => {
               {translations[language].replayTitle}
             </p>
             <p className="replay__description">
-              {translations[language].newsTitle}
+              {translations[language].replayDescription}
             </p>
             <a href="#" className="replay__link">
               {translations[language].readMore}
@@ -148,7 +148,7 @@ export const News = () => {
               {translations[language].replayTitle}
             </p>
             <p className="replay__description">
-              {translations[language].newsTitle}
+              {translations[language].replayDescription}
             </p>
             <a href="#" className="replay__link">
               {translations[language].readMore}
@@ -160,7 +160,7 @@ export const News = () => {
               {translations[language].replayTitle}
             </p>
             <p className="replay__description">
-              {translations[language].newsTitle}
+              {translations[language].replayDescription}
             </p>
             <a href="#" className="replay__link">
               {translations[language].readMore}
@@ -172,7 +172,7 @@ export const News = () => {
               {translations[language].replayTitle}
             </p>
             <p className="replay__description">
-              {translations[language].newsTitle}
+              {translations[language].replayDescription}
             </p>
             <a href="#" className="replay__link">
               {translations[language].readMore}
@@ -184,7 +184,7 @@ export const News = () => {
               {translations[language].replayTitle}
             </p>
             <p className="replay__description">
-              {translations[language].newsTitle}
+              {translations[language].replayDescription}
             </p>
             <a href="#" className="replay__link">
               {translations[language].readMore}
@@ -196,7 +196,7 @@ export const News = () => {
               {translations[language].replayTitle}
             </p>
             <p className="replay__description">
-              {translations[language].newsTitle}
+              {translations[language].replayDescription}
             </p>
             <a href="#" className="replay__link">
               {translations[language].readMore}
@@ -208,7 +208,7 @@ export const News = () => {
               {translations[language].replayTitle}
             </p>
             <p className="replay__description">
-              {translations[language].newsTitle}
+              {translations[language].replayDescription}
             </p>
             <a href="#" className="replay__link">
               {translations[language].readMore}
@@ -220,7 +220,7 @@ export const News = () => {
               {translations[language].replayTitle}
             </p>
             <p className="replay__description">
-              {translations[language].newsTitle}
+              {translations[language].replayDescription}
             </p>
             <a href="#" className="replay__link">
               {translations[language].readMore}
@@ -232,7 +232,7 @@ export const News = () => {
               {translations[language].replayTitle}
             </p>
             <p className="replay__description">
-              {translations[language].newsTitle}
+              {translations[language].replayDescription}
             </p>
             <a href="#" className="replay__link">
               {translations[language].readMore}
@@ -244,7 +244,7 @@ export const News = () => {
               {translations[language].replayTitle}
             </p>
             <p className="replay__description">
-              {translations[language].newsTitle}
+              {translations[language].replayDescription}
             </p>
             <a href="#" className="replay__link">
               {translations[language].readMore}
