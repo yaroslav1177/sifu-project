@@ -1,50 +1,55 @@
-# React + TypeScript + Vite
+# Sifu Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is my project about a video game landing page. I built the site using React and TypeScript to create a dynamic and interactive interface. For styling, I used SCSS with BEM methodology, ensuring the code is clean, maintainable, and scalable.
 
-Currently, two official plugins are available:
+The landing page features two responsive sliders, implemented with Swiper.js, which enhance the user experience with smooth transitions. Animations throughout the site are powered by Animate.css, adding to the overall engagement and visual appeal.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Additionally, I integrated a subscription form that validates user input and sends confirmation emails using PHPMailer. To test the form and site functionality, a local server can be set up via Apache using XAMPP.
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **Responsive Design:** The website adapts seamlessly to different screen sizes, ensuring an optimal experience on desktops, tablets, and mobile devices.
+- **SCSS for Styling:** Utilized SCSS to maintain a modular and scalable CSS structure, allowing for easy maintenance and expansion.
+- **BEM Methodology:** Followed BEM (Block, Element, Modifier) methodology to ensure clean, readable, and maintainable code.
+- **Transformations and Animations:** Implemented CSS animations and transformations to enhance the user experience with smooth visual effects.
+- **Accessibility:** Focused on accessibility best practices to ensure the site is usable for all visitors, including those with disabilities.
 
-- Configure the top-level `parserOptions` property like this:
+## Demo
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+Check out the live demo of the project: [Museum Website Demo](https://sifu-project.vercel.app/)
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Technologies Used
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+- **React**
+- **TypeScript**
+- **HTML5**
+- **SCSS**
+- **BEM**
+- **Swiper.js**
+- **PHPMailer**
+- **XAMPP**
+- **Animate.css**
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+## Installation
+
+To run this project locally:
+
+1. Clone the repository
+   ```bash
+
+    git clone https://github.com/yaroslav1177/sifu-project.git
+
+2. Navigate to the project directory
+   ```bash
+
+    cd sifu-project
+
+3. Install dependencies
+   ```bash
+
+    npm install
+
+4. Start the application
+   ```bash
+
+    npm start
