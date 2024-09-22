@@ -54,76 +54,78 @@ export const TopBar = () => {
           </div>
 
           <div className="top-bar__group">
-          <nav className="navigation">
-            <ul className="navigation__list">
-              <li className="navigation__item">
-                <a
-                  href="#"
-                  className={`navigation__link ${
-                    activeLink === "home" ? "active" : ""
-                  }`}
-                  onClick={() => handleLinkClick("home")}
+            <nav className="navigation">
+              <ul className="navigation__list">
+                <li className="navigation__item">
+                  <a
+                    href="#"
+                    className={`navigation__link ${
+                      activeLink === "home" ? "active" : ""
+                    }`}
+                    onClick={() => handleLinkClick("home")}
+                  >
+                    Home
+                  </a>
+                </li>
+                <li className="navigation__item">
+                  <a
+                    href="#about"
+                    className={`navigation__link ${
+                      activeLink === "about" ? "active" : ""
+                    }`}
+                    onClick={() => handleLinkClick("about")}
+                  >
+                    About
+                  </a>
+                </li>
+                <li className="navigation__item">
+                  <a
+                    href="#news"
+                    className={`navigation__link ${
+                      activeLink === "news" ? "active" : ""
+                    }`}
+                    onClick={() => handleLinkClick("news")}
+                  >
+                    News
+                  </a>
+                </li>
+                <li className="navigation__item">
+                  <a
+                    href="#gallery"
+                    className={`navigation__link ${
+                      activeLink === "gallery" ? "active" : ""
+                    }`}
+                    onClick={() => handleLinkClick("gallery")}
+                  >
+                    Gallery
+                  </a>
+                </li>
+                <li className="navigation__item">
+                  <a
+                    href="#contact"
+                    className={`navigation__link ${
+                      activeLink === "contact" ? "active" : ""
+                    }`}
+                    onClick={() => handleLinkClick("contact")}
+                  >
+                    Contact
+                  </a>
+                </li>
+              </ul>
+            </nav>
+            <div className="top-bar__options">
+              <div className="top-bar__select-wrapper">
+                <select
+                  id="language-select"
+                  name="language"
+                  className="top-bar__custom-select"
                 >
-                  Home
-                </a>
-              </li>
-              <li className="navigation__item">
-                <a
-                  href="#about"
-                  className={`navigation__link ${
-                    activeLink === "about" ? "active" : ""
-                  }`}
-                  onClick={() => handleLinkClick("about")}
-                >
-                  About
-                </a>
-              </li>
-              <li className="navigation__item">
-                <a
-                  href="#news"
-                  className={`navigation__link ${
-                    activeLink === "news" ? "active" : ""
-                  }`}
-                  onClick={() => handleLinkClick("news")}
-                >
-                  News
-                </a>
-              </li>
-              <li className="navigation__item">
-                <a
-                  href="#gallery"
-                  className={`navigation__link ${
-                    activeLink === "gallery" ? "active" : ""
-                  }`}
-                  onClick={() => handleLinkClick("gallery")}
-                >
-                  Gallery
-                </a>
-              </li>
-              <li className="navigation__item">
-                <a
-                  href="#contact"
-                  className={`navigation__link ${
-                    activeLink === "contact" ? "active" : ""
-                  }`}
-                  onClick={() => handleLinkClick("contact")}
-                >
-                  Contact
-                </a>
-              </li>
-            </ul>
-          </nav>
-          <div className="top-bar__options">
-            <select
-              id="language-select"
-              name="language"
-              className="top-bar__select"
-            >
-              <option value="en">EN</option>
-              <option value="ua">UA</option>
-            </select>
-            <button className="top-bar__button button">buy now</button>
-          </div>
+                  <option value="en">EN</option>
+                  <option value="ua">UA</option>
+                </select>
+              </div>
+              <button className="top-bar__button button">buy now</button>
+            </div>
           </div>
         </div>
       </header>
@@ -144,32 +146,28 @@ export const TopBar = () => {
           </button>
         </div>
         <div className="menu__info">
-            <a href="#" className="menu__info-item">
-              Home
-            </a>
-            <a href="#about" className="menu__info-item">
-            About
-            </a>
-            <a href="#news" className="menu__info-item">
-              News
-            </a>
-            <a href="#gallery" className="menu__info-item">
-              Gallery
+          <a href="#" className="menu__info-item">
+            Home
           </a>
-            <a href="#contact" className="menu__info-item">
-              Contact
-            </a>
+          <a href="#about" className="menu__info-item">
+            About
+          </a>
+          <a href="#news" className="menu__info-item">
+            News
+          </a>
+          <a href="#gallery" className="menu__info-item">
+            Gallery
+          </a>
+          <a href="#contact" className="menu__info-item">
+            Contact
+          </a>
         </div>
         <div className="menu__options">
-        <select
-              id="language-select"
-              name="language"
-              className="menu__select"
-            >
-              <option value="en">EN</option>
-              <option value="ua">UA</option>
-            </select>
-            <button className="menu__button button">buy now</button>
+          <select id="language-select" name="language" className="menu__select">
+            <option value="en">EN</option>
+            <option value="ua">UA</option>
+          </select>
+          <button className="menu__button button">buy now</button>
         </div>
       </aside>
     </>

@@ -92,13 +92,13 @@ export const Gallery = () => {
           fadeEffect={{ crossFade: true }}
         >
           <SwiperSlide>
-            <div className="gallery__slide1">
+            <div className="gallery__slide-images">
               <img src="/images/arenas-bg.jpg" alt="arenas" />
               <img src="/images/bar.jpg" alt="bar" />
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="gallery__slide2">
+            <div className="gallery__slide-images">
               <img src="/images/bar.jpg" alt="bar" />
               <img src="/images/arenas-bg.jpg" alt="arenas" />
             </div>

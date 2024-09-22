@@ -55,7 +55,7 @@ export const NewsLetter = () => {
     };
 
     try {
-      const response = await fetch("https://sifuproject.infinityfreeapp.com/sendmail.php", {
+      const response = await fetch("http://localhost/sifu-project/sendmail.php", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -175,7 +175,9 @@ export const NewsLetter = () => {
       </div>
 
       {error && <p className="newsletter__error">{error}</p>}
-
+      {successMessage && (
+        <p className="newsletter__success">{successMessage}</p>
+      )}
       <button
         ref={buttonRef}
         type="submit"
@@ -185,9 +187,6 @@ export const NewsLetter = () => {
       >
         SUBSCRIBE
       </button>
-      {successMessage && (
-        <p className="newsletter__success">{successMessage}</p>
-      )}
     </form>
   );
 };
