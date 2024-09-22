@@ -1,10 +1,13 @@
 import { useEffect, useRef, useState } from "react";
 import "animate.css";
 import "./News.scss";
+import { useLanguage } from "../../translation/LanguageProvider";
+import translations from "../../translation/translations";
 
 export const News = () => {
   const headerRef = useRef(null);
   const contentRef = useRef(null);
+  const { language } = useLanguage();
 
   const [isHeaderVisible, setIsHeaderVisible] = useState(false);
   const [isContentVisible, setIsContentVisible] = useState(false);
@@ -41,7 +44,9 @@ export const News = () => {
           isHeaderVisible ? "animate__fadeInUp" : ""
         }`}
       >
-        <h2 className="title-group__title news__title">LATEST NEWS</h2>
+        <h2 className="title-group__title news__title">
+          {translations[language].newsTitle}
+        </h2>
         <div className="title-group__dot"></div>
         <h2 className="title-group__title-japan news__title-japan">消息</h2>
       </div>
@@ -54,167 +59,195 @@ export const News = () => {
       >
         <div className="news__arenas arenas">
           <div className="arenas__image"></div>
-          <p className="arenas__date">March 28, 2023</p>
-          <p className="arenas__title">
-            PATCH 1.19 & 1.20 - <br /> ARENAS & DAY 1 PATCH
-          </p>
+          <p className="arenas__date">{translations[language].arenasDate}</p>
+          <p className="arenas__title">{translations[language].arenasTitle}</p>
           <p className="arenas__description">
-            Sifu is finally on Steam and Xbox, and the Arenas update is here!
+            {translations[language].arenasDescription}
           </p>
           <a href="#" className="arenas__link">
-            READ MORE
+            {translations[language].readMore}
           </a>
         </div>
 
         <div className="news__replay replay">
           <div className="replay__item">
-            <p className="replay__date">February 3, 2023</p>
-            <p className="replay__title">REPLAY EDITOR CONTEST</p>
+            <p className="replay__date">{translations[language].replayDate}</p>
+            <p className="replay__title">
+              {translations[language].replayTitle}
+            </p>
             <p className="replay__description">
-              We're launching our second community contest...
+              {translations[language].newsTitle}
             </p>
             <a href="#" className="replay__link">
-              READ MORE
+              {translations[language].readMore}
             </a>
           </div>
           <div className="replay__item">
-            <p className="replay__date">February 3, 2023</p>
-            <p className="replay__title">REPLAY EDITOR CONTEST</p>
+            <p className="replay__date">{translations[language].replayDate}</p>
+            <p className="replay__title">
+              {translations[language].replayTitle}
+            </p>
             <p className="replay__description">
-              We're launching our second community contest...
+              {translations[language].newsTitle}
             </p>
             <a href="#" className="replay__link">
-              READ MORE
+              {translations[language].readMore}
             </a>
           </div>
           <div className="replay__item">
-            <p className="replay__date">February 3, 2023</p>
-            <p className="replay__title">REPLAY EDITOR CONTEST</p>
+            <p className="replay__date">{translations[language].replayDate}</p>
+            <p className="replay__title">
+              {translations[language].replayTitle}
+            </p>
             <p className="replay__description">
-              We're launching our second community contest...
+              {translations[language].newsTitle}
             </p>
             <a href="#" className="replay__link">
-              READ MORE
+              {translations[language].readMore}
             </a>
           </div>
           <div className="replay__item">
-            <p className="replay__date">February 3, 2023</p>
-            <p className="replay__title">REPLAY EDITOR CONTEST</p>
+            <p className="replay__date">{translations[language].replayDate}</p>
+            <p className="replay__title">
+              {translations[language].replayTitle}
+            </p>
             <p className="replay__description">
-              We're launching our second community contest...
+              {translations[language].newsTitle}
             </p>
             <a href="#" className="replay__link">
-              READ MORE
+              {translations[language].readMore}
             </a>
           </div>
           <div className="replay__item">
-            <p className="replay__date">February 3, 2023</p>
-            <p className="replay__title">REPLAY EDITOR CONTEST</p>
+            <p className="replay__date">{translations[language].replayDate}</p>
+            <p className="replay__title">
+              {translations[language].replayTitle}
+            </p>
             <p className="replay__description">
-              We're launching our second community contest...
+              {translations[language].newsTitle}
             </p>
             <a href="#" className="replay__link">
-              READ MORE
+              {translations[language].readMore}
             </a>
           </div>
           <div className="replay__item">
-            <p className="replay__date">February 3, 2023</p>
-            <p className="replay__title">REPLAY EDITOR CONTEST</p>
+            <p className="replay__date">{translations[language].replayDate}</p>
+            <p className="replay__title">
+              {translations[language].replayTitle}
+            </p>
             <p className="replay__description">
-              We're launching our second community contest...
+              {translations[language].newsTitle}
             </p>
             <a href="#" className="replay__link">
-              READ MORE
+              {translations[language].readMore}
             </a>
           </div>
           <div className="replay__item">
-            <p className="replay__date">February 3, 2023</p>
-            <p className="replay__title">REPLAY EDITOR CONTEST</p>
+            <p className="replay__date">{translations[language].replayDate}</p>
+            <p className="replay__title">
+              {translations[language].replayTitle}
+            </p>
             <p className="replay__description">
-              We're launching our second community contest...
+              {translations[language].newsTitle}
             </p>
             <a href="#" className="replay__link">
-              READ MORE
+              {translations[language].readMore}
             </a>
           </div>
           <div className="replay__item">
-            <p className="replay__date">February 3, 2023</p>
-            <p className="replay__title">REPLAY EDITOR CONTEST</p>
+            <p className="replay__date">{translations[language].replayDate}</p>
+            <p className="replay__title">
+              {translations[language].replayTitle}
+            </p>
             <p className="replay__description">
-              We're launching our second community contest...
+              {translations[language].newsTitle}
             </p>
             <a href="#" className="replay__link">
-              READ MORE
+              {translations[language].readMore}
             </a>
           </div>
           <div className="replay__item">
-            <p className="replay__date">February 3, 2023</p>
-            <p className="replay__title">REPLAY EDITOR CONTEST</p>
+            <p className="replay__date">{translations[language].replayDate}</p>
+            <p className="replay__title">
+              {translations[language].replayTitle}
+            </p>
             <p className="replay__description">
-              We're launching our second community contest...
+              {translations[language].newsTitle}
             </p>
             <a href="#" className="replay__link">
-              READ MORE
+              {translations[language].readMore}
             </a>
           </div>
           <div className="replay__item">
-            <p className="replay__date">February 3, 2023</p>
-            <p className="replay__title">REPLAY EDITOR CONTEST</p>
+            <p className="replay__date">{translations[language].replayDate}</p>
+            <p className="replay__title">
+              {translations[language].replayTitle}
+            </p>
             <p className="replay__description">
-              We're launching our second community contest...
+              {translations[language].newsTitle}
             </p>
             <a href="#" className="replay__link">
-              READ MORE
+              {translations[language].readMore}
             </a>
           </div>
           <div className="replay__item">
-            <p className="replay__date">February 3, 2023</p>
-            <p className="replay__title">REPLAY EDITOR CONTEST</p>
+            <p className="replay__date">{translations[language].replayDate}</p>
+            <p className="replay__title">
+              {translations[language].replayTitle}
+            </p>
             <p className="replay__description">
-              We're launching our second community contest...
+              {translations[language].newsTitle}
             </p>
             <a href="#" className="replay__link">
-              READ MORE
+              {translations[language].readMore}
             </a>
           </div>
           <div className="replay__item">
-            <p className="replay__date">February 3, 2023</p>
-            <p className="replay__title">REPLAY EDITOR CONTEST</p>
+            <p className="replay__date">{translations[language].replayDate}</p>
+            <p className="replay__title">
+              {translations[language].replayTitle}
+            </p>
             <p className="replay__description">
-              We're launching our second community contest...
+              {translations[language].newsTitle}
             </p>
             <a href="#" className="replay__link">
-              READ MORE
+              {translations[language].readMore}
             </a>
           </div>
           <div className="replay__item">
-            <p className="replay__date">February 3, 2023</p>
-            <p className="replay__title">REPLAY EDITOR CONTEST</p>
+            <p className="replay__date">{translations[language].replayDate}</p>
+            <p className="replay__title">
+              {translations[language].replayTitle}
+            </p>
             <p className="replay__description">
-              We're launching our second community contest...
+              {translations[language].newsTitle}
             </p>
             <a href="#" className="replay__link">
-              READ MORE
+              {translations[language].readMore}
             </a>
           </div>
           <div className="replay__item">
-            <p className="replay__date">February 3, 2023</p>
-            <p className="replay__title">REPLAY EDITOR CONTEST</p>
+            <p className="replay__date">{translations[language].replayDate}</p>
+            <p className="replay__title">
+              {translations[language].replayTitle}
+            </p>
             <p className="replay__description">
-              We're launching our second community contest...
+              {translations[language].newsTitle}
             </p>
             <a href="#" className="replay__link">
-              READ MORE
+              {translations[language].readMore}
             </a>
           </div>
           <div className="replay__item">
-            <p className="replay__date">February 3, 2023</p>
-            <p className="replay__title">REPLAY EDITOR CONTEST</p>
+            <p className="replay__date">{translations[language].replayDate}</p>
+            <p className="replay__title">
+              {translations[language].replayTitle}
+            </p>
             <p className="replay__description">
-              We're launching our second community contest...
+              {translations[language].newsTitle}
             </p>
             <a href="#" className="replay__link">
-              READ MORE
+              {translations[language].readMore}
             </a>
           </div>
         </div>

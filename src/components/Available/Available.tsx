@@ -1,10 +1,13 @@
 import { useEffect, useRef, useState } from "react";
 import "animate.css";
 import './Available.scss';
+import { useLanguage } from "../../translation/LanguageProvider";
+import translations from "../../translation/translations";
 
 export const Available = () => {
   const headerRef = useRef(null);
   const listRef = useRef(null);
+  const { language } = useLanguage();
 
   const [isHeaderVisible, setIsHeaderVisible] = useState(false);
   const [isListVisible, setIsListVisible] = useState(false);
@@ -41,7 +44,7 @@ export const Available = () => {
           isHeaderVisible ? "animate__fadeInUp" : ""
         }`}
       >
-        <h2 className='title-group__title'>available</h2>
+        <h2 className='title-group__title'>{translations[language].availableTitle}</h2>
         <div className='title-group__dot'></div>
         <h2 className='title-group__title-japan'>可用</h2>
       </div>

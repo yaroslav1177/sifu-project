@@ -14,10 +14,13 @@ import {
   Pagination,
   Scrollbar,
 } from "swiper/modules";
+import { useLanguage } from "../../translation/LanguageProvider";
+import translations from "../../translation/translations";
 
 export const Gallery = () => {
   const topRef = useRef(null);
   const scrollRef = useRef(null);
+  const { language } = useLanguage();
 
   const [isTopVisible, setIsTopVisible] = useState(false);
   const [isScrollVisible, setIsScrollVisible] = useState(false);
@@ -56,7 +59,7 @@ export const Gallery = () => {
               isTopVisible ? "animate__fadeInLeft" : ""
             }`}
           >
-            <h2 className="title-group__title">GALLERY</h2>
+            <h2 className="title-group__title">{translations[language].galleryTitle}</h2>
             <div className="title-group__dot"></div>
             <h2 className="title-group__title-japan">艺术</h2>
           </div>
@@ -67,8 +70,8 @@ export const Gallery = () => {
             }`}
           >
             <div className="scroll__titles">
-              <p className="scroll__title">PHOTOS_相片</p>
-              <p className="scroll__title">VIDEOS_影片</p>
+              <p className="scroll__title">{translations[language].scrollPhotos}</p>
+              <p className="scroll__title">{translations[language].scrollVideos}</p>
             </div>
             <div className="swiper-scrollbar-gallery"></div>
           </div>

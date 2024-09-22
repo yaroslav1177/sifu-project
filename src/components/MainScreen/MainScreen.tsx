@@ -1,10 +1,14 @@
+import { useLanguage } from "../../translation/LanguageProvider";
+import translations from "../../translation/translations";
 import "./MainScreen.scss";
 
 export const MainScreen = () => {
+  const { language } = useLanguage();
+
   return (
     <section className="main">
       <div className="main__available animate__animated animate__fadeInUp">
-        <h3 className="main__subtitle">available on</h3>
+        <h3 className="main__subtitle">{translations[language].availableOn}</h3>
         <div className="main__social social">
           <ul className="social__list">
             <li className="social__item">

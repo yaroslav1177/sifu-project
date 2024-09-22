@@ -1,11 +1,14 @@
 import { useEffect, useRef, useState } from "react";
 import "animate.css";
 import "./Follow.scss";
+import { useLanguage } from "../../translation/LanguageProvider";
+import translations from "../../translation/translations";
 
 export const Follow = () => {
   const titleRef = useRef(null);
   const socialRef = useRef(null);
   const technologyRef = useRef(null);
+  const { language } = useLanguage();
 
   const [isTitleVisible, setIsTitleVisible] = useState(false);
   const [isSocialVisible, setIsSocialVisible] = useState(false);
@@ -45,7 +48,7 @@ export const Follow = () => {
           isTitleVisible ? "animate__fadeIn" : ""
         }`}
       >
-        FOLLOW US
+        {translations[language].followUs}
       </h3>
 
       <div

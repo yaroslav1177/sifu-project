@@ -1,5 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import "./NewsLetter.scss";
+import { useLanguage } from "../../translation/LanguageProvider";
+import translations from "../../translation/translations";
 
 export const NewsLetter = () => {
   const [name, setName] = useState("");
@@ -7,6 +9,7 @@ export const NewsLetter = () => {
   const [agreed, setAgreed] = useState(false);
   const [error, setError] = useState("");
   const [successMessage, setSuccessMessage] = useState<string>("");
+  const { language } = useLanguage();
 
   const headerRef = useRef(null);
   const formRef = useRef(null);
@@ -122,7 +125,7 @@ export const NewsLetter = () => {
           isHeaderVisible ? "animate__fadeInUp" : ""
         }`}
       >
-        <h2 className="title-group__title">NEWSLETTER</h2>
+        <h2 className="title-group__title">{translations[language].newsLetterTitle}</h2>
         <div className="title-group__dot"></div>
         <h2 className="title-group__title-japan">通讯</h2>
       </div>
@@ -185,7 +188,7 @@ export const NewsLetter = () => {
           isButtonVisible ? "animate__fadeIn" : ""
         }`}
       >
-        SUBSCRIBE
+        {translations[language].subscribe}
       </button>
     </form>
   );
