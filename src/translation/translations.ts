@@ -94,7 +94,7 @@ const translations: LanguageTranslations = {
     availableTitle: "доступно",
     newsLetterTitle: "ПІДПИСКА",
     subscribe: "ПІДПИСАТИСЬ",
-    followUs: "СОЦІАЛЬНІ МЕРЕЖІ",
+    followUs: "СТЕЖИТИ",
     footer: "LOREM IPSUM - УСІ ПРАВА ЗАХИЩЕНО"
   },
 };
