@@ -23,7 +23,11 @@
     font-size: 45px;
     font-weight: 600;
     line-height: 62px;
+    margin-left: 50px;
     margin-bottom: 40px;
+    @media (min-width: 485px) {
+      margin-left: 0;
+    }
   }
 
   &__social {

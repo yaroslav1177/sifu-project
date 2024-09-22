@@ -6,6 +6,8 @@ The landing page features two responsive sliders, implemented with Swiper.js, wh
 
 Additionally, I integrated a subscription form that validates user input and sends confirmation emails using PHPMailer. To test the form and site functionality, a local server can be set up via Apache using XAMPP.
 
+Furthermore, I implemented a language switching feature using React Context, allowing users to seamlessly switch between English and Ukrainian translations across the entire site.
+
 ## Features
 
 - **Responsive Design:** The website adapts seamlessly to different screen sizes, ensuring an optimal experience on desktops, tablets, and mobile devices.
@@ -29,6 +31,7 @@ Check out the live demo of the project: [Sifu Website Demo](https://sifu-project
 - **PHPMailer**
 - **XAMPP**
 - **Animate.css**
+- **React Context**
 
 ## Installation
 
