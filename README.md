@@ -16,7 +16,7 @@ Additionally, I integrated a subscription form that validates user input and sen
 
 ## Demo
 
-Check out the live demo of the project: [Museum Website Demo](https://sifu-project.vercel.app/)
+Check out the live demo of the project: [Sifu Website Demo](https://sifu-project.vercel.app/)
 
 ## Technologies Used
 
