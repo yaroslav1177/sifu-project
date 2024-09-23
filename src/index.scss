@@ -1,11 +1,11 @@
 @font-face {
-  font-family: 'Fixel Variable';
-  src: url('/fonts/FixelVariable.ttf') format('ttf');
+  font-family: "Fixel Variable";
+  src: url("/fonts/FixelVariable.ttf") format("ttf");
   font-weight: 100 900;
   font-style: normal;
 }
 
-@import 'animate.css';
+@import "animate.css";
 
 *,
 *::before,
@@ -26,7 +26,7 @@ html {
 
 body {
   margin: 0;
-  font-family: 'Fixel Variable', sans-serif;
+  font-family: "Fixel Variable", sans-serif;
   background-color: #fff;
   color: #fff;
   min-height: 100vh;
@@ -65,18 +65,26 @@ ol {
   margin: 0;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-size: inherit;
   font-weight: normal;
 }
 
-blockquote, q {
+blockquote,
+q {
   quotes: none;
 }
 
-blockquote::before, blockquote::after,
-q::before, q::after {
-  content: '';
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
+  content: "";
 }
 
 table {
@@ -84,7 +92,8 @@ table {
   width: 100%;
 }
 
-button, input {
+button,
+input {
   border: none;
   outline: none;
 }
@@ -105,7 +114,7 @@ button, input {
 }
 
 ::-webkit-scrollbar-track {
-  background-color: #2F100F;
+  background-color: #2f100f;
 }
 
 ::-webkit-scrollbar-thumb:hover {

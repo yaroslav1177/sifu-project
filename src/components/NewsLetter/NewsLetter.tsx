@@ -31,7 +31,7 @@ export const NewsLetter = () => {
     return re.test(String(name).trim());
   };
 
-  const handleSubmit = async (e: { preventDefault: () => void; }) => {
+  const handleSubmit = async (e: { preventDefault: () => void }) => {
     e.preventDefault();
 
     if (!validateName(name)) {
@@ -58,13 +58,16 @@ export const NewsLetter = () => {
     };
 
     try {
-      const response = await fetch("http://localhost/sifu-project/sendmail.php", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
+      const response = await fetch(
+        "http://localhost/sifu-project/sendmail.php",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
 
       const result = await response.json();
 
@@ -125,7 +128,9 @@ export const NewsLetter = () => {
           isHeaderVisible ? "animate__fadeInUp" : ""
         }`}
       >
-        <h2 className="title-group__title">{translations[language].newsLetterTitle}</h2>
+        <h2 className="title-group__title">
+          {translations[language].newsLetterTitle}
+        </h2>
         <div className="title-group__dot"></div>
         <h2 className="title-group__title-japan">通讯</h2>
       </div>

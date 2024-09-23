@@ -1,16 +1,14 @@
 .main {
   height: 100vh;
-  background: 
-  linear-gradient(180deg, rgba(17, 17, 17, 0) 80%, #111111 100%),
-    url('/images/main-warrior-bg.png') center/cover no-repeat,
-    url('/images/top-bar-logo.svg') center 20px/600px 500px no-repeat,
-    url('/images/main-bg.jpg') bottom right/cover no-repeat;
+  background: linear-gradient(180deg, rgba(17, 17, 17, 0) 80%, #111111 100%),
+    url("/images/main-warrior-bg.png") center/cover no-repeat,
+    url("/images/top-bar-logo.svg") center 20px/600px 500px no-repeat,
+    url("/images/main-bg.jpg") bottom right/cover no-repeat;
   padding-top: 560px;
 
   @media (max-width: 1200px) {
     padding-top: 460px;
   }
-  
 
   &__available {
     padding: 35px;
@@ -31,7 +29,7 @@
       padding: 15px;
     }
   }
-  
+
   &__subtitle {
     font-weight: 700;
     font-size: 32px;
@@ -44,7 +42,7 @@
     display: flex;
     gap: 60px;
     align-items: center;
-  
+
     @media (max-width: 1200px) {
       display: grid;
       grid-template-columns: repeat(3, 1fr);

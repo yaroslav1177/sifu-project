@@ -59,7 +59,9 @@ export const Gallery = () => {
               isTopVisible ? "animate__fadeInLeft" : ""
             }`}
           >
-            <h2 className="title-group__title">{translations[language].galleryTitle}</h2>
+            <h2 className="title-group__title">
+              {translations[language].galleryTitle}
+            </h2>
             <div className="title-group__dot"></div>
             <h2 className="title-group__title-japan">艺术</h2>
           </div>
@@ -70,8 +72,12 @@ export const Gallery = () => {
             }`}
           >
             <div className="scroll__titles">
-              <p className="scroll__title">{translations[language].scrollPhotos}</p>
-              <p className="scroll__title">{translations[language].scrollVideos}</p>
+              <p className="scroll__title">
+                {translations[language].scrollPhotos}
+              </p>
+              <p className="scroll__title">
+                {translations[language].scrollVideos}
+              </p>
             </div>
             <div className="swiper-scrollbar-gallery"></div>
           </div>
@@ -81,8 +87,8 @@ export const Gallery = () => {
           spaceBetween={0}
           slidesPerView={1}
           navigation={{
-            nextEl: '.swiper-button-next-gallery',
-            prevEl: '.swiper-button-prev-gallery',
+            nextEl: ".swiper-button-next-gallery",
+            prevEl: ".swiper-button-prev-gallery",
           }}
           pagination={{ clickable: true }}
           scrollbar={{ draggable: true, el: ".swiper-scrollbar-gallery" }}

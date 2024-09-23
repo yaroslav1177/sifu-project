@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import "animate.css";
-import './Available.scss';
+import "./Available.scss";
 import { useLanguage } from "../../translation/LanguageProvider";
 import translations from "../../translation/translations";
 
@@ -37,16 +37,18 @@ export const Available = () => {
   }, []);
 
   return (
-    <section className='available'>
+    <section className="available">
       <div
         ref={headerRef}
         className={`available__header title-group animate__animated ${
           isHeaderVisible ? "animate__fadeInUp" : ""
         }`}
       >
-        <h2 className='title-group__title'>{translations[language].availableTitle}</h2>
-        <div className='title-group__dot'></div>
-        <h2 className='title-group__title-japan'>可用</h2>
+        <h2 className="title-group__title">
+          {translations[language].availableTitle}
+        </h2>
+        <div className="title-group__dot"></div>
+        <h2 className="title-group__title-japan">可用</h2>
       </div>
       <ul
         ref={listRef}
@@ -72,10 +74,7 @@ export const Available = () => {
             target="_blank"
             className="available__link"
           >
-            <img
-              src="/images/icons/big-epic-icon.svg"
-              alt="epicgames icon"
-            />
+            <img src="/images/icons/big-epic-icon.svg" alt="epicgames icon" />
           </a>
         </li>
         <li className="available__item">
@@ -96,10 +95,7 @@ export const Available = () => {
             target="_blank"
             className="available__link"
           >
-            <img
-              src="/images/icons/big-steam-icon.svg"
-              alt="steam icon"
-            />
+            <img src="/images/icons/big-steam-icon.svg" alt="steam icon" />
           </a>
         </li>
         <li className="available__item">
@@ -108,13 +104,10 @@ export const Available = () => {
             target="_blank"
             className="available__link"
           >
-            <img
-              src="/images/icons/big-xbox-icon.svg"
-              alt="xbox icon"
-            />
+            <img src="/images/icons/big-xbox-icon.svg" alt="xbox icon" />
           </a>
         </li>
       </ul>
     </section>
-  )
-}
+  );
+};

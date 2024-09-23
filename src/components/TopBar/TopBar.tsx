@@ -169,7 +169,12 @@ export const TopBar = () => {
           </a>
         </div>
         <div className="menu__options">
-          <select id="language-select" name="language" className="menu__select" onChange={(e) => switchLanguage(e.target.value)}>
+          <select
+            id="language-select"
+            name="language"
+            className="menu__select"
+            onChange={(e) => switchLanguage(e.target.value)}
+          >
             <option value="en">EN</option>
             <option value="ua">UA</option>
           </select>

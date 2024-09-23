@@ -49,18 +49,18 @@
     linear-gradient(180deg, rgba(17, 17, 17, 0) 80%, #111111 100%),
     url("/images/slider1-bg.jpg") no-repeat center center / cover;
 
-    @media (max-width: 1200px) {
-      background: linear-gradient(180deg, #111111 0%, rgba(17, 17, 17, 0) 50%),
+  @media (max-width: 1200px) {
+    background: linear-gradient(180deg, #111111 0%, rgba(17, 17, 17, 0) 50%),
       linear-gradient(90deg, #111111 0%, rgba(17, 17, 17, 0) 50%),
       linear-gradient(180deg, rgba(17, 17, 17, 0) 80%, #111111 100%),
       url("/images/slider1-bg.jpg") no-repeat right center / cover;
-    }
-    @media (max-width: 660px) {
-      background: linear-gradient(180deg, #111111 0%, rgba(17, 17, 17, 0) 50%),
+  }
+  @media (max-width: 660px) {
+    background: linear-gradient(180deg, #111111 0%, rgba(17, 17, 17, 0) 50%),
       linear-gradient(90deg, #111111 0%, rgba(17, 17, 17, 0) 50%),
       linear-gradient(180deg, rgba(17, 17, 17, 0) 80%, #111111 100%),
       url("/images/slider1-bg.jpg") no-repeat -1000px center / cover;
-    }
+  }
   &__content {
     width: 100%;
     display: flex;
@@ -118,16 +118,16 @@
     linear-gradient(180deg, rgba(17, 17, 17, 0) 50%, #111111 100%),
     url("/images/slider2-bg.jpg") no-repeat left center / cover;
 
-    @media (max-width: 1200px) {
-      background: linear-gradient(180deg, #111111 0%, rgba(17, 17, 17, 0) 30%),
+  @media (max-width: 1200px) {
+    background: linear-gradient(180deg, #111111 0%, rgba(17, 17, 17, 0) 30%),
       linear-gradient(180deg, rgba(17, 17, 17, 0) 50%, #111111 100%),
       url("/images/slider2-bg.jpg") no-repeat left center / cover;
-    }
-    @media (max-width: 660px) {
-      background: linear-gradient(180deg, #111111 0%, rgba(17, 17, 17, 0) 30%),
+  }
+  @media (max-width: 660px) {
+    background: linear-gradient(180deg, #111111 0%, rgba(17, 17, 17, 0) 30%),
       linear-gradient(180deg, rgba(17, 17, 17, 0) 50%, #111111 100%),
       url("/images/slider2-bg.jpg") no-repeat -150px center / cover;
-    }
+  }
 
   &__content {
     width: 100%;
@@ -194,18 +194,18 @@
     linear-gradient(180deg, rgba(17, 17, 17, 0) 80%, #111111 100%),
     url("/images/slider3-bg.jpg") no-repeat center center / cover;
 
-    @media (max-width: 1200px) {
-      background: linear-gradient(180deg, #111111 0%, rgba(17, 17, 17, 0) 50%),
+  @media (max-width: 1200px) {
+    background: linear-gradient(180deg, #111111 0%, rgba(17, 17, 17, 0) 50%),
       linear-gradient(90deg, #111111 0%, rgba(17, 17, 17, 0) 50%),
       linear-gradient(180deg, rgba(17, 17, 17, 0) 80%, #111111 100%),
       url("/images/slider3-bg.jpg") no-repeat right center / cover;
-    }
-    @media (max-width: 660px) {
-      background: linear-gradient(180deg, #111111 0%, rgba(17, 17, 17, 0) 50%),
+  }
+  @media (max-width: 660px) {
+    background: linear-gradient(180deg, #111111 0%, rgba(17, 17, 17, 0) 50%),
       linear-gradient(90deg, #111111 0%, rgba(17, 17, 17, 0) 50%),
       linear-gradient(180deg, rgba(17, 17, 17, 0) 80%, #111111 100%),
       url("/images/slider3-bg.jpg") no-repeat -700px center / cover;
-    }
+  }
 
   &__content {
     width: 100%;
